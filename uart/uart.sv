@@ -14,18 +14,13 @@ module uart #(parameter DBIT = 8, SB_TICK = 16)(/*AUTOARG*/
    output logic		   tx;
    output logic		   tx_done_tick;
    output logic		   rx_done_tick;
-   output logic [DBIT-1:0] dout;
-   
+   output logic [DBIT-1:0] dout;  
  
   /*AUTOREG*/ 
   /*AUTOWIRE*/ 
   // Beginning of automatic wires (for undeclared instantiated-module outputs)
   logic			s_tick;			// From BR of baud_rate.v
   // End of automatics
-
-   //logic 		rx;
-   
-   //assign rx = tx;
    
    baud_rate BR (/*AUTOINST*/
 		 // Outputs
